@@ -21,18 +21,23 @@ public class MyGUI {
 		panel.setBorder(BorderFactory.createTitledBorder("Text Editor"));
 		frame.add(panel);
 		
-		panel.setLayout(new MigLayout("debug", "[]10[]","[][][]"));
+		panel.setLayout(new MigLayout("debug", "[]10[]10[]","[][][]"));
 		
 		JLabel firstnameLabel = new JLabel("First Name");
 		JLabel familynameLabel = new JLabel("Family Name");
 		JTextField firstName = new JTextField(20);
 		JTextField lastName = new JTextField(20);
-		JButton lab1 = new JButton("Label #1");			JButton lab2 = new JButton ("Label #2");
-		JButton  lab3 = new JButton("Label #3");			JButton  lab4 = new JButton("Label #4");
-		JButton  lab5 = new JButton ("Label #5");			JButton  lab6 = new JButton ("Label #6");
-		JTextArea displayText = new JTextArea(30,30);
 		
-
+		JButton lab1 = new JButton("Label #1");	
+		JButton lab2 = new JButton("Label #2");
+		JButton lab3 = new JButton("Label #3");			
+		JButton lab4 = new JButton("Label #4");
+		JButton lab5 = new JButton("Label #5");			
+		JButton lab6 = new JButton("Label #6");
+		JButton lab7 = new JButton("Label #7");
+		
+		
+		JTextArea displayText = new JTextArea(30,30);
 		
 		panel.add(lab1,"wrap");
 		panel.add(lab2);
@@ -43,6 +48,7 @@ public class MyGUI {
 		panel.add(lab4, "wrap");
 		panel.add(lab5);
 		panel.add(lab6);
+		panel.add(lab7);
 
 	    
 		
