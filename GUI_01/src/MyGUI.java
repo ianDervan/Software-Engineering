@@ -17,16 +17,19 @@ public class MyGUI {
 		JFrame frame = new JFrame();
 		frame.setSize(500,500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		JPanel panel = new JPanel();
-		panel.setBorder(BorderFactory.createTitledBorder("Text Editor"));
-		frame.add(panel);
 		
-		panel.setLayout(new MigLayout("debug"));
+		JPanel panelButtons1 = new JPanel();
+		JPanel panelButtons2 = new JPanel();
 		
-		JLabel firstnameLabel = new JLabel("First Name");
-		JLabel familynameLabel = new JLabel("Family Name");
-		JTextField firstName = new JTextField(20);
-		JTextField lastName = new JTextField(20);
+		panelButtons1.setBorder(BorderFactory.createTitledBorder("Buttons1"));
+		panelButtons1.setBorder(BorderFactory.createTitledBorder("Buttons2"));
+		
+		
+		frame.add(panelButtons1);
+		frame.add(panelButtons2);
+		
+		panelButtons1.setLayout(new MigLayout("debug"));
+		panelButtons2.setLayout(new MigLayout("debug"));
 		
 		JButton buttGetFile = new JButton("Get File");	
 		JButton buttReverse = new JButton("Revese");
@@ -46,14 +49,28 @@ public class MyGUI {
 		
 		JTextArea displayText = new JTextArea(30,30);
 		
+		//trying to add panels of buttons as a separate panel so we can have 2 
+		//panels of separate buttons then insert another panel containing the text field.
 		
-		panel.add(buttGetFile, "span, center, wrap");
-		panel.add(buttSave, "split 2");
-		panel.add(displayText, "span2, push, grow"); //textArea will grow when dragged
-		panel.add(buttSearch, "wrap");
-
-		//trying to add more buttons under neath each other but having problems
-		//Also new pencil drawing in git repo
+		panelButtons1.add(buttGetFile, "span, grow, center, wrap");
+		panelButtons1.add(buttSave, "span, grow, center, wrap");
+		//panel.add(displayText, "span2, push, grow"); //textArea will grow when dragged
+		panelButtons1.add(buttSearch, "span, grow, center, wrap");
+		panelButtons1.add(buttSomthingElse, "span, grow, center, wrap");
+		panelButtons1.add(buttDeleteFile, "span, grow, center, wrap");
+		panelButtons1.add(buttSelectAll, "span, grow, center, wrap");
+		panelButtons1.add(buttPrint, "span, grow, center, wrap"); 
+		
+		//panel containing text area inserted between the two panels of buttons
+		
+		panelButtons2.add(buttGetFile, "span, grow, center, wrap");
+		panelButtons2.add(buttSave, "span, grow, center, wrap");
+		//panel.add(displayText, "span2, push, grow"); //textArea will grow when dragged
+		panelButtons2.add(buttSomthing, "span, grow, center, wrap");
+		panelButtons2.add(buttUpperCase, "span, grow, center, wrap");
+		panelButtons2.add(buttCopyFile, "span, grow, center, wrap");
+		panelButtons2.add(buttClearText, "span, grow, center, wrap");
+		panelButtons2.add(buttWordCount, "span, grow, center, wrap");
 	    
 		
 		frame.setVisible(true);
