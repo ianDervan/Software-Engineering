@@ -5,6 +5,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 import net.miginfocom.swing.MigLayout;
 
@@ -16,6 +18,15 @@ public class MyGUI{
 	protected JButton open, reverse,clear;
 
 	public MyGUI(){
+		
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch (ClassNotFoundException | InstantiationException
+				| IllegalAccessException | UnsupportedLookAndFeelException e) {
+			e.printStackTrace();
+		}
+		
+		
 		JFrame frame = new JFrame();
 		frame.setSize(800,500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -24,11 +35,6 @@ public class MyGUI{
 		frame.add(panel);
 
 		panel.setLayout(new MigLayout("debug", "[]10[]10[]","[][][]"));
-
-		//		JLabel firstnameLabel = new JLabel("First Name");
-		//		JLabel familynameLabel = new JLabel("Family Name");
-		//		JTextField firstName = new JTextField(20);
-		//		JTextField lastName = new JTextField(20);
 
 		open = new JButton("Open File");	
 		clear = new JButton("Clear File");
@@ -46,8 +52,6 @@ public class MyGUI{
 		panel.add(open,"wrap");
 		panel.add(clear);
 		panel.add(displayTextSP);
-
-
 		panel.add(reverse ,"wrap");
 		panel.add(lab4, "wrap");
 		panel.add(lab5);
@@ -55,6 +59,7 @@ public class MyGUI{
 		panel.add(lab7);
 
 		displayText.setLineWrap(true);
+
 
 
 

@@ -26,7 +26,6 @@ public class Window {
 					public void run(){
 						try {
 							fc.doInBackground();
-							//mg.progress.setValue(0);
 						} catch (Exception ex) {
 							// TODO Auto-generated catch block
 							log.log( Level.SEVERE, ex.toString(), ex );
@@ -35,7 +34,7 @@ public class Window {
 				});
 
 			}
-		} );
+		});
 
 		mg.reverse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)
