@@ -5,15 +5,20 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import net.miginfocom.swing.MigLayout;
 
 
-public class MyGUI {
+public class MyGUI{
 	
-	public static void main(String[] args){
+	protected JTextArea displayText;
+	protected JScrollPane displayTextSP;
+	protected JButton open;
+	
+	public MyGUI(){
 		JFrame frame = new JFrame();
 		frame.setSize(800,500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -23,23 +28,25 @@ public class MyGUI {
 		
 		panel.setLayout(new MigLayout("debug", "[]10[]10[]","[][][]"));
 		
-		JLabel firstnameLabel = new JLabel("First Name");
-		JLabel familynameLabel = new JLabel("Family Name");
-		JTextField firstName = new JTextField(20);
-		JTextField lastName = new JTextField(20);
+//		JLabel firstnameLabel = new JLabel("First Name");
+//		JLabel familynameLabel = new JLabel("Family Name");
+//		JTextField firstName = new JTextField(20);
+//		JTextField lastName = new JTextField(20);
 		
-		JButton lab1 = new JButton("Label #1");	
-		JButton lab2 = new JButton("Label #2");
-		JButton lab3 = new JButton("Label #3");			
+		open = new JButton("Open File");	
+		JButton lab2 = new JButton("Clear File");
+		JButton lab3 = new JButton("Reverse");			
 		JButton lab4 = new JButton("Label #4");
 		JButton lab5 = new JButton("Label #5");			
 		JButton lab6 = new JButton("Label #6");
 		JButton lab7 = new JButton("Label #7");
 		
 		
-		JTextArea displayText = new JTextArea(30,30);
+		displayText = new JTextArea(30,30);
+		//Scroll pane not working with mig layout
+		displayTextSP = new JScrollPane(displayText);
 		
-		panel.add(lab1,"wrap");
+		panel.add(open,"wrap");
 		panel.add(lab2);
 		panel.add(displayText);
 		
@@ -49,6 +56,8 @@ public class MyGUI {
 		panel.add(lab5);
 		panel.add(lab6);
 		panel.add(lab7);
+		
+
 
 	    
 		
