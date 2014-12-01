@@ -19,7 +19,7 @@ public class Window {
 		final ReverseAction ra = new ReverseAction(mg);
 
 
-		mg.open.addActionListener(new ActionListener() {
+		mg.buttGetFile.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)
 			{ 
 				SwingUtilities.invokeLater(new Runnable(){
@@ -36,7 +36,7 @@ public class Window {
 			}
 		});
 
-		mg.reverse.addActionListener(new ActionListener() {
+		mg.buttReverse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)
 			{ 
 				SwingUtilities.invokeLater(new Runnable(){
@@ -53,13 +53,13 @@ public class Window {
 			}
 		} );
 
-		mg.clear.addActionListener(new ActionListener() {
+		mg.buttClearText.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)
 			{ 
 				SwingUtilities.invokeLater(new Runnable(){
 					public void run(){
 						try {
-							mg.displayText.setText("");
+							mg.displayTextMain.setText("");
 						} catch (Exception ex) {
 							// TODO Auto-generated catch block
 							log.log( Level.SEVERE, ex.toString(), ex );

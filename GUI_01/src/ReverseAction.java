@@ -24,7 +24,7 @@ public class ReverseAction extends SwingWorker<Object, Object>{
 
 	//read line method
 	public BufferedReader lineRead (){	
-		StringReader sr = new StringReader(mg.displayText.getText()); 
+		StringReader sr = new StringReader(mg.displayTextMain.getText()); 
 		BufferedReader br = new BufferedReader(sr); 
 		return br;			
 
@@ -46,9 +46,9 @@ public class ReverseAction extends SwingWorker<Object, Object>{
 				firstFile.add("\n");
 
 			}
-			mg.displayText.setText("");
+			mg.displayTextMain.setText("");
 			for(int i = 0; i < firstFile.size(); i++){
-				mg.displayText.append(firstFile.get(i) + " ");
+				mg.displayTextMain.append(firstFile.get(i) + " ");
 				//mg.progress.setValue(50);
 			}
 		}catch(IOException ex){

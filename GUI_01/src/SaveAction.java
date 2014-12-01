@@ -19,7 +19,7 @@ public class SaveAction extends SwingWorker<Object, Object>{
 	protected Object doInBackground() throws Exception {
 	
 		try (BufferedWriter fileOut = new BufferedWriter(new FileWriter("String.txt"))) {
-		    mg.displayText.write(fileOut);
+		    mg.displayTextMain.write(fileOut);
 		}
 		
 		

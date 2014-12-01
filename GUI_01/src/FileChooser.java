@@ -46,7 +46,7 @@ public class FileChooser extends SwingWorker<Object, Object>{
 					//mg.progress.setValue(20);
 					while((nextLine = br.readLine()) != null)
 					{
-						mg.displayText.append(nextLine + "\n");		//Print out file contents to textarea
+						mg.displayTextMain.append(nextLine + "\n");		//Print out file contents to textarea
 
 					}
 				}catch(IOException ex){
@@ -58,7 +58,7 @@ public class FileChooser extends SwingWorker<Object, Object>{
 			}
 		}
 		else {			
-			mg.displayText.append("No file selected");
+			mg.displayTextMain.setText("No file selected");
 		}
 		return null;
 	}
