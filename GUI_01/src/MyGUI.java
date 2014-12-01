@@ -1,5 +1,4 @@
 
-
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -14,7 +13,7 @@ public class MyGUI{
 
 	protected JTextArea displayText;
 	protected JScrollPane displayTextSP;
-	protected JButton open, reverse;
+	protected JButton open, reverse,clear;
 
 	public MyGUI(){
 		JFrame frame = new JFrame();
@@ -32,7 +31,7 @@ public class MyGUI{
 		//		JTextField lastName = new JTextField(20);
 
 		open = new JButton("Open File");	
-		JButton lab2 = new JButton("Clear File");
+		clear = new JButton("Clear File");
 		reverse = new JButton("Reverse");			
 		JButton lab4 = new JButton("Label #4");
 		JButton lab5 = new JButton("Label #5");			
@@ -45,7 +44,7 @@ public class MyGUI{
 		displayTextSP = new JScrollPane(displayText);
 
 		panel.add(open,"wrap");
-		panel.add(lab2);
+		panel.add(clear);
 		panel.add(displayTextSP);
 
 

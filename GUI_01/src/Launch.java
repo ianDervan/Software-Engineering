@@ -7,12 +7,13 @@ import javax.swing.SwingUtilities;
 
 
 public class Launch {
+
 	private final static Logger log = Logger.getLogger( Launch.class.getName() );
 
 
 	public static void main(String[] args){
 
-		MyGUI mg = new MyGUI();	
+		final MyGUI mg = new MyGUI();	
 
 		final FileChooser fc = new FileChooser(mg);
 		final ReverseAction ra = new ReverseAction(mg);
@@ -51,7 +52,23 @@ public class Launch {
 					}
 				});
 			}
-		} );	
+		} );
+		
+		mg.clear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)
+			{ 
+				SwingUtilities.invokeLater(new Runnable(){
+					public void run(){
+						try {
+							mg.displayText.setText("");
+						} catch (Exception ex) {
+							// TODO Auto-generated catch block
+							log.log( Level.SEVERE, ex.toString(), ex );
+						} 
+					}
+				});
+			}
+		} );
 
 	}
 }

@@ -30,9 +30,6 @@ public class ReverseAction extends SwingWorker<Object, Object>{
 
 	}	
 
-	//method to reverse text area text
-	//	public void reverseText()
-	//	{
 	@Override
 	protected Object doInBackground() throws Exception {
 		// TODO Auto-generated method stub
