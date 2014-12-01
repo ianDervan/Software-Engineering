@@ -12,27 +12,27 @@ import javax.swing.SwingWorker;
 
 public class FileChooser extends SwingWorker<Object, Object>{
 	private final Logger log = Logger.getLogger( FileChooser.class.getName() );
-	
+
 	MyGUI mg = null;
 	String nextLine = null;	
-	
-		
+
+
 	public FileChooser(MyGUI obj)
 	{
 		mg = obj;
 	}
-	
+
 	//void selectFile() throws IOException{
-		@Override
-		protected Object doInBackground() throws Exception {
+	@Override
+	protected Object doInBackground() throws Exception {
 		BufferedReader br = null;
-	
+
 		JFileChooser fileChooser = new JFileChooser();
 		fileChooser.setMultiSelectionEnabled(true);
 
-		
+
 		if (fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
-			
+
 			File[] files = fileChooser.getSelectedFiles();
 			//for loop
 			for(int i = 0; i < files.length; i++){
@@ -42,19 +42,19 @@ public class FileChooser extends SwingWorker<Object, Object>{
 				catch(Exception ex){
 					log.log( Level.SEVERE, ex.toString(), ex );
 				}
-					try{
-						//mg.progress.setValue(20);
-						while((nextLine = br.readLine()) != null)
-						{
-								mg.displayText.append(nextLine + "\n");		//Print out file contents to textarea
-			
-						}
-					}catch(IOException ex){
-						log.log( Level.SEVERE, ex.toString(), ex );
-					}finally{
-						br.close();	
-						//mg.progress.setValue(100);
+				try{
+					//mg.progress.setValue(20);
+					while((nextLine = br.readLine()) != null)
+					{
+						mg.displayText.append(nextLine + "\n");		//Print out file contents to textarea
+
 					}
+				}catch(IOException ex){
+					log.log( Level.SEVERE, ex.toString(), ex );
+				}finally{
+					br.close();	
+					//mg.progress.setValue(100);
+				}
 			}
 		}
 		else {			
@@ -62,9 +62,9 @@ public class FileChooser extends SwingWorker<Object, Object>{
 		}
 		return null;
 	}
-//		@Override
-//		protected void process(List<Integer> chunks)
-//		{
-//			mg.progress.
-//		}
+	//		@Override
+	//		protected void process(List<Integer> chunks)
+	//		{
+	//			mg.progress.
+	//		}
 }
