@@ -1,0 +1,46 @@
+﻿Merge remote-tracking branch 'origin/master'
+
+Conflicts:
+	GUI_01/bin/.gitignore
+	GUI_01/bin/FileChooser.class
+	GUI_01/bin/Launch.class
+	GUI_01/bin/MyGUI.class
+	GUI_01/bin/ReverseAction.class
+	GUI_01/src/MyGUI.java
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 12 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   GUI_01/bin/.gitignore
+#	new file:   GUI_01/bin/CountAction.class
+#	new file:   GUI_01/bin/FileChooser.class
+#	new file:   GUI_01/bin/Launch.class
+#	new file:   GUI_01/bin/MyGUI$1.class
+#	modified:   GUI_01/bin/MyGUI.class
+#	new file:   GUI_01/bin/ReverseAction.class
+#	new file:   GUI_01/bin/SaveAction.class
+#	new file:   GUI_01/bin/Window.class
+#	new file:   GUI_01/src/CountAction.java
+#	new file:   GUI_01/src/FileChooser.java
+#	new file:   GUI_01/src/Launch.java
+#	modified:   GUI_01/src/MyGUI.java
+#	new file:   GUI_01/src/ReverseAction.java
+#	new file:   GUI_01/src/SaveAction.java
+#	new file:   GUI_01/src/Window.java
+#	deleted:    NewPencilDesign.ep
+#	modified:   pencil.exe.ep
+#
+
