@@ -256,7 +256,7 @@ public class MyGUI {
 
 		panelEditText.add(displayTextSecondary, " gap 50px,push, grow,wrap"); //textArea will grow when dragged
 
-		panelTextField.add(displayTextSecondary, "push, grow"); //textArea will grow when dragged
+		//panelTextField.add(displayTextSecondary, "push, grow"); //textArea will grow when dragged
 
 		panelButtons2.add(buttUpperCase);
 		panelButtons2.add(buttPrint);
