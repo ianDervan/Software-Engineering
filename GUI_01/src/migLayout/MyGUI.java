@@ -45,15 +45,31 @@ public class MyGUI {
 	JButton buttSomthing;			
 	JButton buttCopyFile;
 	JButton buttSomthingElse;
+<<<<<<< HEAD
 
 	
 	private static  int fontSize = 8;
+=======
+	
+	JSlider slider;
+	JComboBox comboBox;
+	JComboBox comboBox1;
+	JComboBox comboBox2;
+	
+	DefaultComboBoxModel model, model1, model2;
+	
+	JRadioButton rdbtn;
+	JRadioButton rdbtn1;
+	JRadioButton rdbtn2;
+
+	protected int fontSize = 8;
+>>>>>>> origin/master
 
 	public MyGUI(){
 		JFrame frame = new JFrame();
 		frame.setSize(750,700);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		} catch (ClassNotFoundException e1) {
@@ -70,18 +86,23 @@ public class MyGUI {
 			e1.printStackTrace();
 		}
 
-
 		JPanel panelButtons1 = new JPanel();
 		JPanel panelButtons2 = new JPanel();
 		JPanel panelTextField = new JPanel();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 		JPanel panelEditText= new JPanel();
-		
-		
+
 		panelButtons1.setBorder(BorderFactory.createTitledBorder("Main Buttons"));
 		panelButtons2.setBorder(BorderFactory.createTitledBorder("Secondary Buttons"));
 		panelTextField.setBorder(BorderFactory.createTitledBorder("TextFields"));
 		panelEditText.setBorder(BorderFactory.createTitledBorder("TextFields"));
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 
 		panelButtons1.setBorder(BorderFactory.createTitledBorder("Main Buttons"));
 		panelButtons2.setBorder(BorderFactory.createTitledBorder("Secondary Buttons"));
@@ -93,13 +114,17 @@ public class MyGUI {
 		frame.getContentPane().add(panelEditText, "span, push, grow");
 		frame.getContentPane().add(panelButtons2, "span, push, grow");
 
+<<<<<<< HEAD
 
 		
+=======
+>>>>>>> origin/master
 		panelButtons1.setLayout(new MigLayout());
 		panelButtons2.setLayout(new MigLayout());
 		panelTextField.setLayout(new MigLayout());
 		panelEditText.setLayout(new MigLayout());
 
+<<<<<<< HEAD
 		
 		JButton buttGetFile = new JButton("Get File");	
 		JButton buttReverse = new JButton("Revese");
@@ -152,12 +177,66 @@ public class MyGUI {
 		JRadioButton rdbtn1 = new JRadioButton("Font size 14");
 		JRadioButton rdbtn2 = new JRadioButton("Font size 18");
 
+=======
+		buttGetFile = new JButton("Get File");	
+		buttReverse = new JButton("Revese");
+		buttSave = new JButton("Save");			
+		buttClearText = new JButton("Clear Text");
+		buttEditText = new JButton("Edit Text");			
+		buttSearch = new JButton("Search");
+		buttSelectAll = new JButton("Select All");
+		buttUpperCase = new JButton("Upper Case");	
+		buttPrint = new JButton("Print");
+		buttWordCount = new JButton("Word Count");			
+		buttDeleteFile = new JButton("Delete File");
+		buttSomthing = new JButton("Somthing");			
+		buttCopyFile = new JButton("Copy File");
+		buttSomthingElse = new JButton("Somthing Else");
+>>>>>>> origin/master
 
+		displayTextMain = new JTextArea(30,30);
+
+		model = new DefaultComboBoxModel();
+		model.addElement("BLACK");
+		model.addElement("RED");
+		model.addElement("BLUE");
+		model.addElement("GREEN");
+		model.addElement("WHITE");
+		model.addElement("ORANGE");
+		model.addElement("BLACK");
+
+		model1 = new DefaultComboBoxModel();
+		model1.addElement("PLAIN     ");
+		model1.addElement("BOLD");
+		model1.addElement("ITALICS");
+		
+		model2 = new DefaultComboBoxModel();
+		model2.addElement("VERDANDA");
+		model2.addElement("ARIAL");
+		model2.addElement("OPEN SANS");
+		model2.addElement("TIMES NEW ROMAN");
+		model2.addElement("SERIF");
+		model2.addElement("Helvetica");
+
+		comboBox = new JComboBox(model);
+		comboBox1 = new JComboBox(model1);
+		comboBox2 = new JComboBox(model2);
+		
+		slider = new JSlider(JSlider.HORIZONTAL, 0, 50, 25);
+		slider.setPreferredSize(new Dimension(100, 80));
+		
+		displayTextSecondary = new JTextArea(15,15);
+		rdbtn = new JRadioButton("Font size 10");
+		rdbtn1 = new JRadioButton("Font size 14");
+		rdbtn2 = new JRadioButton("Font size 18");
 
 		panelButtons1.setLayout(new MigLayout());
 		panelButtons2.setLayout(new MigLayout());
 		panelTextField.setLayout(new MigLayout());
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 
 		buttGetFile = new JButton("Get File");	
 		buttReverse = new JButton("Revese");
@@ -173,10 +252,20 @@ public class MyGUI {
 		buttSomthing = new JButton("Somthing");			
 		buttCopyFile = new JButton("Copy File");
 		buttSomthingElse = new JButton("Somthing Else");
+<<<<<<< HEAD
 
 		
+=======
+>>>>>>> origin/master
 
+		slider = new JSlider(JSlider.HORIZONTAL, 0, 50, 25);
 
+<<<<<<< HEAD
+=======
+		displayTextMain = new JTextArea(30,30);
+		displayTextSecondary = new JTextArea(15,30);
+
+>>>>>>> origin/master
 		//trying to add panels of buttons as a separate panel so we can have 2 
 		//panels of separate buttons then insert another panel containing the text field.
 
@@ -187,28 +276,41 @@ public class MyGUI {
 		panelButtons1.add(buttEditText);
 		panelButtons1.add(buttSearch);
 		panelButtons1.add(buttSelectAll); 
+<<<<<<< HEAD
 
 
 		panelButtons1.add(slider); 
 
 
+=======
+		panelButtons1.add(slider); 
+
+>>>>>>> origin/master
 		//panel containing text area inserted between the two panels of buttons
 
 		panelTextField.add(displayTextMain, "push, grow"); //textArea will grow when dragged
 
+<<<<<<< HEAD
 		
+=======
+>>>>>>> origin/master
 		panelEditText.add(rdbtn,"split 4, flowy, top, sgx" );
 		panelEditText.add(rdbtn2,"sgx");
 		panelEditText.add(rdbtn1,"sgx");
 		panelEditText.add(slider,"sgx "); 
-		
+
 		panelEditText.add(comboBox,"split 3, flowy, top,gap 50px,gapbottom 20px, sgx"); 
 		panelEditText.add(comboBox1,"gap 50px,gapbottom 20px,sgx"); 
 		panelEditText.add(comboBox2,"gap 50px,sgx"); 
 
-	
 		panelEditText.add(displayTextSecondary, " gap 50px,push, grow,wrap"); //textArea will grow when dragged
+<<<<<<< HEAD
 	
+=======
+
+		panelTextField.add(displayTextSecondary, "push, grow"); //textArea will grow when dragged
+
+>>>>>>> origin/master
 		panelButtons2.add(buttUpperCase);
 		panelButtons2.add(buttPrint);
 		panelButtons2.add(buttWordCount);
@@ -217,6 +319,7 @@ public class MyGUI {
 		panelButtons2.add(buttCopyFile);
 		panelButtons2.add(buttSomthingElse);
 
+<<<<<<< HEAD
 	    
        comboBox.addActionListener(
             new ActionListener(){
@@ -446,6 +549,8 @@ public class MyGUI {
 
 		});
 
+=======
+>>>>>>> origin/master
 		frame.setVisible(true);
 	}
 
