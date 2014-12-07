@@ -14,14 +14,12 @@ import javax.swing.event.ChangeListener;
 
 public class Window {
 
-
 	private MyGUI mg;
 	private FileChooser fc;
 	private ReverseAction ra;
 	private SaveAction sa;
 
 	private final Logger log = Logger.getLogger( Window.class.getName() );
-
 
 	public void openWindow(){
 		mg = new MyGUI();	

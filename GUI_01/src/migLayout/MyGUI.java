@@ -1,29 +1,17 @@
 package migLayout;
 
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.TextField;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.Vector;
-
 import javax.swing.BorderFactory;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JSlider;
 import javax.swing.JTextArea;
-import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-
 import net.miginfocom.swing.MigLayout;
 
 
@@ -45,12 +33,6 @@ public class MyGUI {
 	JButton buttSomthing;			
 	JButton buttCopyFile;
 	JButton buttSomthingElse;
-<<<<<<< HEAD
-
-	
-	private static  int fontSize = 8;
-=======
-	
 	JSlider slider;
 	JComboBox comboBox;
 	JComboBox comboBox1;
@@ -63,7 +45,7 @@ public class MyGUI {
 	JRadioButton rdbtn2;
 
 	protected int fontSize = 8;
->>>>>>> origin/master
+
 
 	public MyGUI(){
 		JFrame frame = new JFrame();
@@ -89,20 +71,14 @@ public class MyGUI {
 		JPanel panelButtons1 = new JPanel();
 		JPanel panelButtons2 = new JPanel();
 		JPanel panelTextField = new JPanel();
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 		JPanel panelEditText= new JPanel();
 
 		panelButtons1.setBorder(BorderFactory.createTitledBorder("Main Buttons"));
 		panelButtons2.setBorder(BorderFactory.createTitledBorder("Secondary Buttons"));
 		panelTextField.setBorder(BorderFactory.createTitledBorder("TextFields"));
 		panelEditText.setBorder(BorderFactory.createTitledBorder("TextFields"));
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
 
 		panelButtons1.setBorder(BorderFactory.createTitledBorder("Main Buttons"));
 		panelButtons2.setBorder(BorderFactory.createTitledBorder("Secondary Buttons"));
@@ -114,17 +90,12 @@ public class MyGUI {
 		frame.getContentPane().add(panelEditText, "span, push, grow");
 		frame.getContentPane().add(panelButtons2, "span, push, grow");
 
-<<<<<<< HEAD
-
-		
-=======
->>>>>>> origin/master
 		panelButtons1.setLayout(new MigLayout());
 		panelButtons2.setLayout(new MigLayout());
 		panelTextField.setLayout(new MigLayout());
 		panelEditText.setLayout(new MigLayout());
 
-<<<<<<< HEAD
+
 		
 		JButton buttGetFile = new JButton("Get File");	
 		JButton buttReverse = new JButton("Revese");
@@ -142,7 +113,6 @@ public class MyGUI {
 		JButton buttSomthingElse = new JButton("Somthing Else");
 		
 
-		final JTextArea displayTextMain = new JTextArea(30,30);
 		
 		DefaultComboBoxModel model = new DefaultComboBoxModel();
         model.addElement("BLACK");
@@ -166,18 +136,14 @@ public class MyGUI {
         model2.addElement("SERIF");
         model2.addElement("Helvetica");
        
-		
-		final JComboBox comboBox = new JComboBox(model);
-		final JComboBox comboBox1 = new JComboBox(model1);
-		final JComboBox comboBox2 = new JComboBox(model2);
-		final JSlider slider = new JSlider(JSlider.HORIZONTAL, 0, 50, 25);
+
 		slider.setPreferredSize(new Dimension(100, 80));
-		final JTextArea displayTextSecondary = new JTextArea(15,15);
+
 		JRadioButton rdbtn = new JRadioButton("Font size 10");
 		JRadioButton rdbtn1 = new JRadioButton("Font size 14");
 		JRadioButton rdbtn2 = new JRadioButton("Font size 18");
 
-=======
+
 		buttGetFile = new JButton("Get File");	
 		buttReverse = new JButton("Revese");
 		buttSave = new JButton("Save");			
@@ -192,7 +158,7 @@ public class MyGUI {
 		buttSomthing = new JButton("Somthing");			
 		buttCopyFile = new JButton("Copy File");
 		buttSomthingElse = new JButton("Somthing Else");
->>>>>>> origin/master
+
 
 		displayTextMain = new JTextArea(30,30);
 
@@ -233,10 +199,6 @@ public class MyGUI {
 		panelButtons1.setLayout(new MigLayout());
 		panelButtons2.setLayout(new MigLayout());
 		panelTextField.setLayout(new MigLayout());
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 
 		buttGetFile = new JButton("Get File");	
 		buttReverse = new JButton("Revese");
@@ -252,20 +214,15 @@ public class MyGUI {
 		buttSomthing = new JButton("Somthing");			
 		buttCopyFile = new JButton("Copy File");
 		buttSomthingElse = new JButton("Somthing Else");
-<<<<<<< HEAD
 
-		
-=======
->>>>>>> origin/master
+
 
 		slider = new JSlider(JSlider.HORIZONTAL, 0, 50, 25);
 
-<<<<<<< HEAD
-=======
+
 		displayTextMain = new JTextArea(30,30);
 		displayTextSecondary = new JTextArea(15,30);
 
->>>>>>> origin/master
 		//trying to add panels of buttons as a separate panel so we can have 2 
 		//panels of separate buttons then insert another panel containing the text field.
 
@@ -276,24 +233,18 @@ public class MyGUI {
 		panelButtons1.add(buttEditText);
 		panelButtons1.add(buttSearch);
 		panelButtons1.add(buttSelectAll); 
-<<<<<<< HEAD
 
 
 		panelButtons1.add(slider); 
 
 
-=======
+
 		panelButtons1.add(slider); 
 
->>>>>>> origin/master
 		//panel containing text area inserted between the two panels of buttons
 
 		panelTextField.add(displayTextMain, "push, grow"); //textArea will grow when dragged
 
-<<<<<<< HEAD
-		
-=======
->>>>>>> origin/master
 		panelEditText.add(rdbtn,"split 4, flowy, top, sgx" );
 		panelEditText.add(rdbtn2,"sgx");
 		panelEditText.add(rdbtn1,"sgx");
@@ -304,13 +255,9 @@ public class MyGUI {
 		panelEditText.add(comboBox2,"gap 50px,sgx"); 
 
 		panelEditText.add(displayTextSecondary, " gap 50px,push, grow,wrap"); //textArea will grow when dragged
-<<<<<<< HEAD
-	
-=======
 
 		panelTextField.add(displayTextSecondary, "push, grow"); //textArea will grow when dragged
 
->>>>>>> origin/master
 		panelButtons2.add(buttUpperCase);
 		panelButtons2.add(buttPrint);
 		panelButtons2.add(buttWordCount);
@@ -319,238 +266,6 @@ public class MyGUI {
 		panelButtons2.add(buttCopyFile);
 		panelButtons2.add(buttSomthingElse);
 
-<<<<<<< HEAD
-	    
-       comboBox.addActionListener(
-            new ActionListener(){
-                public void actionPerformed(ActionEvent e){
-                    
-                	String colours = (String) comboBox.getSelectedItem();
-                	System.out.println(colours);
-                	if(colours.equals("BLACK"))
-                	{
-                		displayTextMain.setForeground(Color.BLACK);
-                		displayTextSecondary.append("Font colour set to Black\n");
-                		
-                	}
-                	else if(colours.equals("RED"))
-                	{
-                		displayTextMain.setForeground(Color.RED);
-                		displayTextSecondary.setForeground(Color.RED);
-                		displayTextSecondary.append("Font colour set to Red\n");
-                	}
-                	else if(colours.equals("BLUE"))
-                	{
-                		displayTextMain.setForeground(Color.BLUE);
-                		displayTextSecondary.setForeground(Color.BLUE);
-                		displayTextSecondary.append("Font colour set to Blue\n");
-                	}
-                	else if(colours.equals("GREEN"))
-                	{
-                		displayTextMain.setForeground(Color.GREEN);
-                		displayTextSecondary.setForeground(Color.GREEN);
-                		displayTextSecondary.append("Font colour set to Green\n");
-                	}
-                	else if(colours.equals("WHITE"))
-                	{
-                		displayTextMain.setForeground(Color.WHITE);
-                		displayTextSecondary.setForeground(Color.WHITE);
-                		displayTextSecondary.append("Font colour set to White\n");
-                	}
-                	else if(colours.equals("ORANGE"))
-                	{
-                		displayTextMain.setForeground(Color.ORANGE);
-                		displayTextSecondary.setForeground(Color.ORANGE);
-                		displayTextSecondary.append("Font colour set to Orange\n");
-                	}
-                
-                }
-            }            
-        );
-       comboBox1.addActionListener(
-           new ActionListener(){
-               public void actionPerformed(ActionEvent e){
-                   
-               	String fontType = (String) comboBox1.getSelectedItem();
-               
-               	if(fontType.equals("PLAIN     "))
-               	{
-               		
-               		displayTextMain.setFont(displayTextMain.getFont().deriveFont(Font.PLAIN));
-               		displayTextSecondary.setFont(displayTextMain.getFont().deriveFont(Font.PLAIN));
-            		displayTextSecondary.append("Font text set to Plain\n");
-            	
-               	}
-               	else if(fontType.equals("ITALICS"))
-               	{
-               		displayTextMain.setFont(displayTextMain.getFont().deriveFont(Font.ITALIC));
-               		displayTextSecondary.setFont(displayTextMain.getFont().deriveFont(Font.ITALIC));
-            		displayTextSecondary.append("Font text set to ITALIC\n");
-               	}
-            	else if(fontType.equals("BOLD"))
-               	{
-            		displayTextMain.setFont(displayTextMain.getFont().deriveFont(Font.BOLD));
-            		displayTextSecondary.setFont(displayTextMain.getFont().deriveFont(Font.BOLD));
-            		displayTextSecondary.append("Font text set to BOLD\n");
-               		
-               	}
-               	
-             
-               }
-           }            
-       );
-     
-       
-       comboBox2.addActionListener(
-            new ActionListener(){
-                public void actionPerformed(ActionEvent e){
-                    
-                	String fontType = (String) comboBox2.getSelectedItem();
-                	System.out.println(fontType);
-                	if(fontType.equals("VERDANDA"))
-                	{
-                		Font font = new Font("Verdanda", Font.PLAIN, fontSize);
-                		 displayTextMain.setFont(font);
-                		 displayTextSecondary.setFont(font);
-                		 displayTextSecondary.append("Font type set to Verdanda\n");
-                	}
-                	else if(fontType.equals("ARIAL"))
-                	{
-                		Font font = new Font("arial", Font.PLAIN, fontSize);
-                		 displayTextMain.setFont(font);
-                		 displayTextSecondary.setFont(font);
-                		 displayTextSecondary.append("Font type set to Arial\n");
-                	}
-                	else if(fontType.equals("OPEN SANS"))
-                	{
-                		Font font = new Font("open sans", Font.PLAIN, fontSize);
-                		 displayTextMain.setFont(font);
-                		 displayTextSecondary.setFont(font);
-                		 displayTextSecondary.append("Font type set to Open Sans\n");
-                	}
-                	else if(fontType.equals("TIMES NEW ROMAN"))
-                	{
-                		Font font = new Font("times new roman", Font.PLAIN, fontSize);
-                		 displayTextMain.setFont(font);
-                		 displayTextSecondary.setFont(font);
-                		 displayTextSecondary.append("Font type set to Times New Roman\n");
-                	}
-                	else if(fontType.equals("SERIF"))
-                	{
-                		Font font = new Font("Serif", Font.PLAIN, fontSize);
-                		 displayTextMain.setFont(font);
-                		 displayTextSecondary.setFont(font);
-                		 displayTextSecondary.append("Font type set to Serif\n");
-                	}
-                	else if(fontType.equals("Helvetica"))
-                	{
-                		Font font = new Font("Helvetica", Font.BOLD, fontSize);
-                		 displayTextMain.setFont(font);
-                		 displayTextSecondary.setFont(font);
-                		 displayTextSecondary.append("Font type set to Helvetica\n");
-                	}
-                
-                }
-            }            
-        );
-	
-
-       	slider.setMinorTickSpacing(2);
-	    slider.setMajorTickSpacing(10);
-	    slider.setPaintTicks(true);
-	    slider.setPaintLabels(true);
-
-	    slider.setLabelTable(slider.createStandardLabels(10));
-	   	    
-		slider.addChangeListener(new ChangeListener() {
-	
-            @Override
-            public void stateChanged(ChangeEvent e) {
-            
-                fontSize = slider.getValue();
-                
-                	
-                	if(fontSize>15)
-                	{
-                		
-                		Font font = new Font("Verdana", Font.PLAIN, fontSize);
-                		 displayTextMain.setFont(font);
-                		 displayTextMain.setForeground(Color.BLUE);
-            			 
-                	}
-                
-                }
-
-	        });
-		 
-			rdbtn.addActionListener(new ActionListener(){
-			    public void actionPerformed(ActionEvent e) {
-			      // Do something here...
-			    	fontSize =10;
-			    	
-			    	
-			    	 Font font = new Font("", Font.BOLD, fontSize);
-			    	 displayTextMain.setFont(font);
-			    	 displayTextMain.setForeground(Color.BLUE);
-					
-			    }
-			});
-			
-			rdbtn1.addActionListener(new ActionListener(){
-			    public void actionPerformed(ActionEvent e) {
-			      // Do something here...
-			    	fontSize =14;
-			    	
-			    	 Font font = new Font("", Font.BOLD, fontSize);
-			    	 displayTextMain.setFont(font);
-			    	 displayTextMain.setForeground(Color.BLUE);
-			    }
-			});
-			rdbtn2.addActionListener(new ActionListener(){
-			    public void actionPerformed(ActionEvent e) {
-			      // Do something here...
-			    	fontSize =18;
-			    	
-			    	 Font font = new Font("", Font.BOLD, fontSize);
-			    	 displayTextMain.setFont(font);
-			    	 displayTextMain.setForeground(Color.BLUE);
-			    }
-			});
-
-		slider.setMinorTickSpacing(2);
-		slider.setMajorTickSpacing(10);
-		slider.setPaintTicks(true);
-		slider.setPaintLabels(true);
-
-		slider.setLabelTable(slider.createStandardLabels(10));
-
-		displayTextMain.append("How now");
-
-		slider.addChangeListener(new ChangeListener() {
-
-		@Override
-		public void stateChanged(ChangeEvent e) {
-
-			final int value = slider.getValue();
-
-
-			if(value>15)
-			{
-
-				Font font = new Font("Verdana", Font.BOLD, value);
-				displayTextMain.setFont(font);
-				displayTextMain.setForeground(Color.BLUE);
-
-			}
-
-		}
-
-
-
-		});
-
-=======
->>>>>>> origin/master
 		frame.setVisible(true);
 	}
 
