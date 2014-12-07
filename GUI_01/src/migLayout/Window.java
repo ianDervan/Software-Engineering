@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.print.PrinterException;
+import java.awt.print.PrinterJob;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -22,6 +24,7 @@ public class Window {
 	private final Logger log = Logger.getLogger( Window.class.getName() );
 
 	public void openWindow(){
+
 		mg = new MyGUI();	
 		fc = new FileChooser(mg);
 		ra = new ReverseAction(mg);
@@ -68,6 +71,7 @@ public class Window {
 					public void run(){
 						try {
 							mg.displayTextMain.setText("");
+							mg.displayTextSecondary.setText("");
 						} catch (Exception ex) {
 							// TODO Auto-generated catch block
 							log.log( Level.SEVERE, ex.toString(), ex );
@@ -92,8 +96,33 @@ public class Window {
 					}
 				});
 			}
+			
 		} );
-		
+		mg.buttPrint.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)
+			{ 
+				SwingUtilities.invokeLater(new Runnable(){
+					public void run(){
+						try {
+							PrinterJob pj = PrinterJob.getPrinterJob();
+							
+							    if (pj.printDialog()) {
+							        try {pj.print();}
+							        catch (PrinterException exc) {
+							            System.out.println(exc);
+							         }
+							     }   
+						} catch (Exception ex) {
+							// TODO Auto-generated catch block
+							log.log( Level.SEVERE, ex.toString(), ex );
+						} 
+					}
+				});
+			}
+			
+		} );
+
+
 		mg.comboBox.addActionListener(
 				new ActionListener(){
 					public void actionPerformed(ActionEvent e){
@@ -140,7 +169,7 @@ public class Window {
 					}
 				}            
 				);
-		
+
 		mg.comboBox1.addActionListener(
 				new ActionListener(){
 					public void actionPerformed(ActionEvent e){

@@ -62,9 +62,4 @@ public class FileChooser extends SwingWorker<Object, Object>{
 		}
 		return null;
 	}
-	//		@Override
-	//		protected void process(List<Integer> chunks)
-	//		{
-	//			mg.progress.
-	//		}
 }
