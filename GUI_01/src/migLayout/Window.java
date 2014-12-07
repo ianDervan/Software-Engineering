@@ -86,7 +86,7 @@ public class Window {
 				SwingUtilities.invokeLater(new Runnable(){
 					public void run(){
 						try {
-
+							//sa.run();
 						} catch (Exception ex) {
 							// TODO Auto-generated catch block
 							log.log( Level.SEVERE, ex.toString(), ex );
@@ -237,7 +237,7 @@ public class Window {
 
 		mg.slider.setLabelTable(mg.slider.createStandardLabels(10));
 
-		mg.displayTextMain.append("How now");
+		//mg.displayTextMain.append("How now");
 
 
 
@@ -268,7 +268,6 @@ public class Window {
 			public void actionPerformed(ActionEvent e) {
 				// Do something here...
 				mg.fontSize =10;
-				System.out.println("How now");
 				System.out.println(mg.fontSize);
 
 				Font font = new Font("", Font.BOLD, mg.fontSize);
@@ -308,7 +307,7 @@ public class Window {
 
 		mg.slider.setLabelTable(mg.slider.createStandardLabels(10));
 
-		mg.displayTextMain.append("How now");
+		mg.displayTextMain.append("Hello now");
 
 
 

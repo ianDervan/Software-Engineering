@@ -56,8 +56,6 @@ public class MyGUI {
 	JRadioButton rdbtn;
 	JRadioButton rdbtn1;
 	JRadioButton rdbtn2;
-	
-
 
 	protected int fontSize = 8;
 
@@ -82,25 +80,20 @@ public class MyGUI {
 			e1.printStackTrace();
 		}
 
-
 		JPanel panelButtons1 = new JPanel();
 		JPanel panelButtons2 = new JPanel();
 		JPanel panelTextField = new JPanel();
 
 		JPanel panelEditText= new JPanel();
 
-
 		panelButtons1.setBorder(BorderFactory.createTitledBorder("Main Buttons"));
 		panelButtons2.setBorder(BorderFactory.createTitledBorder("Secondary Buttons"));
 		panelTextField.setBorder(BorderFactory.createTitledBorder("TextFields"));
 		panelEditText.setBorder(BorderFactory.createTitledBorder("TextFields"));
 
-
-
 		panelButtons1.setBorder(BorderFactory.createTitledBorder("Main Buttons"));
 		panelButtons2.setBorder(BorderFactory.createTitledBorder("Secondary Buttons"));
 		panelTextField.setBorder(BorderFactory.createTitledBorder("TextFields"));
-
 
 		frame.getContentPane().setLayout(new MigLayout());
 		frame.getContentPane().add(panelButtons1, "span, push, grow");
@@ -108,17 +101,10 @@ public class MyGUI {
 		frame.getContentPane().add(panelEditText, "span, push, grow");
 		frame.getContentPane().add(panelButtons2, "span, push, grow");
 
-
-
-
 		panelButtons1.setLayout(new MigLayout());
 		panelButtons2.setLayout(new MigLayout());
 		panelTextField.setLayout(new MigLayout());
 		panelEditText.setLayout(new MigLayout());
-
-
-
-
 
 		buttGetFile = new JButton("Get File");	
 		buttReverse = new JButton("Revese");
@@ -134,11 +120,6 @@ public class MyGUI {
 		buttSomthing = new JButton("Somthing");			
 		buttCopyFile = new JButton("Copy File");
 		buttSomthingElse = new JButton("Somthing Else");
-
-
-
-
-
 
 		displayTextMain = new JTextArea(30,30);
 
@@ -155,7 +136,7 @@ public class MyGUI {
 		model1.addElement("PLAIN     ");
 		model1.addElement("BOLD");
 		model1.addElement("ITALICS");
-
+		
 		model2 = new DefaultComboBoxModel();
 		model2.addElement("VERDANDA");
 		model2.addElement("ARIAL");
@@ -163,7 +144,6 @@ public class MyGUI {
 		model2.addElement("TIMES NEW ROMAN");
 		model2.addElement("SERIF");
 		model2.addElement("Helvetica");
-
 
 		comboBox = new JComboBox(model);
 		comboBox1 = new JComboBox(model1);
@@ -177,12 +157,9 @@ public class MyGUI {
 		rdbtn1 = new JRadioButton("Font size 14");
 		rdbtn2 = new JRadioButton("Font size 18");
 
-
-
 		panelButtons1.setLayout(new MigLayout());
 		panelButtons2.setLayout(new MigLayout());
 		panelTextField.setLayout(new MigLayout());
-
 
 		buttGetFile = new JButton("Get File");	
 		buttReverse = new JButton("Revese");
@@ -201,8 +178,6 @@ public class MyGUI {
 
 		slider = new JSlider(JSlider.HORIZONTAL, 0, 50, 25);
 
-
-
 		displayTextMain = new JTextArea(30,30);
 		displayTextSecondary = new JTextArea(15,30);
 
@@ -216,15 +191,11 @@ public class MyGUI {
 		panelButtons1.add(buttEditText);
 		panelButtons1.add(buttSearch);
 		panelButtons1.add(buttSelectAll); 
-
 		panelButtons1.add(slider); 
-
 
 		//panel containing text area inserted between the two panels of buttons
 
 		panelTextField.add(displayTextMain, "push, grow"); //textArea will grow when dragged
-
-
 
 		panelEditText.add(rdbtn,"split 4, flowy, top, sgx" );
 		panelEditText.add(rdbtn2,"sgx");
@@ -235,14 +206,9 @@ public class MyGUI {
 		panelEditText.add(comboBox1,"gap 50px,gapbottom 20px,sgx"); 
 		panelEditText.add(comboBox2,"gap 50px,sgx"); 
 
-
-
-
 		panelEditText.add(displayTextSecondary, " gap 50px,push, grow,wrap"); //textArea will grow when dragged
 
-
 		panelTextField.add(displayTextSecondary, "push, grow"); //textArea will grow when dragged
-
 
 		panelButtons2.add(buttUpperCase);
 		panelButtons2.add(buttPrint);
@@ -251,10 +217,6 @@ public class MyGUI {
 		panelButtons2.add(buttSomthing);
 		panelButtons2.add(buttCopyFile);
 		panelButtons2.add(buttSomthingElse);
-
-
-
-
 
 		frame.setVisible(true);
 	}
