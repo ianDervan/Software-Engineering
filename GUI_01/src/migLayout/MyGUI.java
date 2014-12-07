@@ -45,13 +45,10 @@ public class MyGUI {
 	JButton buttSomthing;			
 	JButton buttCopyFile;
 	JButton buttSomthingElse;
-<<<<<<< HEAD:GUI_01/src/MyGUI.java
+
 	
 	private static  int fontSize = 8;
-	
-=======
 
->>>>>>> 0944374aa1bd912684321f000941d69df58318f8:GUI_01/src/migLayout/MyGUI.java
 	public MyGUI(){
 		JFrame frame = new JFrame();
 		frame.setSize(750,700);
@@ -77,7 +74,7 @@ public class MyGUI {
 		JPanel panelButtons1 = new JPanel();
 		JPanel panelButtons2 = new JPanel();
 		JPanel panelTextField = new JPanel();
-<<<<<<< HEAD:GUI_01/src/MyGUI.java
+
 		JPanel panelEditText= new JPanel();
 		
 		
@@ -86,19 +83,19 @@ public class MyGUI {
 		panelTextField.setBorder(BorderFactory.createTitledBorder("TextFields"));
 		panelEditText.setBorder(BorderFactory.createTitledBorder("TextFields"));
 		
-=======
+
 
 		panelButtons1.setBorder(BorderFactory.createTitledBorder("Main Buttons"));
 		panelButtons2.setBorder(BorderFactory.createTitledBorder("Secondary Buttons"));
 		panelTextField.setBorder(BorderFactory.createTitledBorder("TextFields"));
 
->>>>>>> 0944374aa1bd912684321f000941d69df58318f8:GUI_01/src/migLayout/MyGUI.java
+
 		frame.getContentPane().setLayout(new MigLayout());
 		frame.getContentPane().add(panelButtons1, "span, push, grow");
 		frame.getContentPane().add(panelTextField, "span, push, grow");
 		frame.getContentPane().add(panelEditText, "span, push, grow");
 		frame.getContentPane().add(panelButtons2, "span, push, grow");
-<<<<<<< HEAD:GUI_01/src/MyGUI.java
+
 		
 		
 		
@@ -165,13 +162,13 @@ public class MyGUI {
 		JRadioButton rdbtn = new JRadioButton("Font size 10");
 		JRadioButton rdbtn1 = new JRadioButton("Font size 14");
 		JRadioButton rdbtn2 = new JRadioButton("Font size 18");
-=======
+
 
 
 		panelButtons1.setLayout(new MigLayout());
 		panelButtons2.setLayout(new MigLayout());
 		panelTextField.setLayout(new MigLayout());
->>>>>>> 0944374aa1bd912684321f000941d69df58318f8:GUI_01/src/migLayout/MyGUI.java
+
 
 		buttGetFile = new JButton("Get File");	
 		buttReverse = new JButton("Revese");
@@ -187,17 +184,16 @@ public class MyGUI {
 		buttSomthing = new JButton("Somthing");			
 		buttCopyFile = new JButton("Copy File");
 		buttSomthingElse = new JButton("Somthing Else");
-<<<<<<< HEAD:GUI_01/src/MyGUI.java
-		
+
 				
-=======
+
 		final JSlider slider = new JSlider(JSlider.HORIZONTAL, 0, 50, 25);
 
 
 
 		displayTextMain = new JTextArea(30,30);
 		displayTextSecondary = new JTextArea(15,30);
->>>>>>> 0944374aa1bd912684321f000941d69df58318f8:GUI_01/src/migLayout/MyGUI.java
+
 		//trying to add panels of buttons as a separate panel so we can have 2 
 		//panels of separate buttons then insert another panel containing the text field.
 
@@ -208,18 +204,14 @@ public class MyGUI {
 		panelButtons1.add(buttEditText);
 		panelButtons1.add(buttSearch);
 		panelButtons1.add(buttSelectAll); 
-<<<<<<< HEAD:GUI_01/src/MyGUI.java
-		
 
-		
-=======
 		panelButtons1.add(slider); 
 
->>>>>>> 0944374aa1bd912684321f000941d69df58318f8:GUI_01/src/migLayout/MyGUI.java
+
 		//panel containing text area inserted between the two panels of buttons
 
 		panelTextField.add(displayTextMain, "push, grow"); //textArea will grow when dragged
-<<<<<<< HEAD:GUI_01/src/MyGUI.java
+
 		
 		
 		panelEditText.add(rdbtn,"split 4, flowy, top, sgx" );
@@ -236,10 +228,10 @@ public class MyGUI {
 	
 		panelEditText.add(displayTextSecondary, " gap 50px,push, grow,wrap"); //textArea will grow when dragged
 		
-=======
+
 		panelTextField.add(displayTextSecondary, "push, grow"); //textArea will grow when dragged
 
->>>>>>> 0944374aa1bd912684321f000941d69df58318f8:GUI_01/src/migLayout/MyGUI.java
+
 		panelButtons2.add(buttUpperCase);
 		panelButtons2.add(buttPrint);
 		panelButtons2.add(buttWordCount);
@@ -249,7 +241,7 @@ public class MyGUI {
 		panelButtons2.add(buttSomthingElse);
 
 
-<<<<<<< HEAD:GUI_01/src/MyGUI.java
+
 	  
 	    
 	
@@ -459,8 +451,7 @@ public class MyGUI {
 				    }
 				});
 
-		
-=======
+
 
 		slider.setMinorTickSpacing(2);
 		slider.setMajorTickSpacing(10);
@@ -498,8 +489,6 @@ public class MyGUI {
 
 
 
-
->>>>>>> 0944374aa1bd912684321f000941d69df58318f8:GUI_01/src/migLayout/MyGUI.java
 		frame.setVisible(true);
 	}
 

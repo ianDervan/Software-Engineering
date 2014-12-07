@@ -10,11 +10,12 @@ import javax.swing.SwingUtilities;
 
 public class Window {
 
-	
+
 	private MyGUI mg;
 	private FileChooser fc;
 	private ReverseAction ra;
-	
+	private SaveAction sa;
+
 	private final Logger log = Logger.getLogger( Window.class.getName() );
 
 
@@ -73,6 +74,24 @@ public class Window {
 				});
 			}
 		} );
+
+
+		mg.buttSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)
+			{ 
+				SwingUtilities.invokeLater(new Runnable(){
+					public void run(){
+						try {
+
+						} catch (Exception ex) {
+							// TODO Auto-generated catch block
+							log.log( Level.SEVERE, ex.toString(), ex );
+						} 
+					}
+				});
+			}
+		} );
+
 
 	}
 }
