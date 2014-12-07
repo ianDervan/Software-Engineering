@@ -1,3 +1,5 @@
+package migLayout;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.logging.Level;
@@ -7,16 +9,19 @@ import javax.swing.SwingUtilities;
 
 
 public class Window {
-	
 
+	
+	private MyGUI mg;
+	private FileChooser fc;
+	private ReverseAction ra;
+	
 	private final Logger log = Logger.getLogger( Window.class.getName() );
-	 
+
 
 	public void openWindow(){
-		final MyGUI mg = new MyGUI();	
-
-		final FileChooser fc = new FileChooser(mg);
-		final ReverseAction ra = new ReverseAction(mg);
+		mg = new MyGUI();	
+		fc = new FileChooser(mg);
+		ra = new ReverseAction(mg);
 
 
 		mg.buttGetFile.addActionListener(new ActionListener() {
@@ -25,7 +30,7 @@ public class Window {
 				SwingUtilities.invokeLater(new Runnable(){
 					public void run(){
 						try {
-							fc.doInBackground();
+							fc.run();
 						} catch (Exception ex) {
 							// TODO Auto-generated catch block
 							log.log( Level.SEVERE, ex.toString(), ex );
@@ -42,7 +47,7 @@ public class Window {
 				SwingUtilities.invokeLater(new Runnable(){
 					public void run(){
 						try {
-							ra.doInBackground();
+							ra.run();
 							//mg.progress.setValue(0);
 						} catch (Exception ex) {
 							// TODO Auto-generated catch block
