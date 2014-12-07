@@ -1,17 +1,29 @@
 package migLayout;
 
+import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Vector;
+
 import javax.swing.BorderFactory;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JSlider;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
 import net.miginfocom.swing.MigLayout;
 
 
@@ -33,6 +45,7 @@ public class MyGUI {
 	JButton buttSomthing;			
 	JButton buttCopyFile;
 	JButton buttSomthingElse;
+	
 	JSlider slider;
 	JComboBox comboBox;
 	JComboBox comboBox1;
@@ -45,7 +58,6 @@ public class MyGUI {
 	JRadioButton rdbtn2;
 
 	protected int fontSize = 8;
-
 
 	public MyGUI(){
 		JFrame frame = new JFrame();
@@ -79,7 +91,6 @@ public class MyGUI {
 		panelTextField.setBorder(BorderFactory.createTitledBorder("TextFields"));
 		panelEditText.setBorder(BorderFactory.createTitledBorder("TextFields"));
 
-
 		panelButtons1.setBorder(BorderFactory.createTitledBorder("Main Buttons"));
 		panelButtons2.setBorder(BorderFactory.createTitledBorder("Secondary Buttons"));
 		panelTextField.setBorder(BorderFactory.createTitledBorder("TextFields"));
@@ -95,55 +106,6 @@ public class MyGUI {
 		panelTextField.setLayout(new MigLayout());
 		panelEditText.setLayout(new MigLayout());
 
-
-		
-		JButton buttGetFile = new JButton("Get File");	
-		JButton buttReverse = new JButton("Revese");
-		JButton buttSave = new JButton("Save");			
-		JButton buttClearText = new JButton("Clear Text");
-		JButton buttEditText = new JButton("Edit Text");			
-		JButton buttSearch = new JButton("Search");
-		JButton buttSelectAll = new JButton("Select All");
-		JButton buttUpperCase = new JButton("Upper Case");	
-		JButton buttPrint = new JButton("Print");
-		JButton buttWordCount = new JButton("Word Count");			
-		JButton buttDeleteFile = new JButton("Delete File");
-		JButton buttSomthing = new JButton("Somthing");			
-		JButton buttCopyFile = new JButton("Copy File");
-		JButton buttSomthingElse = new JButton("Somthing Else");
-		
-
-		
-		DefaultComboBoxModel model = new DefaultComboBoxModel();
-        model.addElement("BLACK");
-        model.addElement("RED");
-        model.addElement("BLUE");
-        model.addElement("GREEN");
-        model.addElement("WHITE");
-        model.addElement("ORANGE");
-        model.addElement("BLACK");
-        
-        DefaultComboBoxModel model1 = new DefaultComboBoxModel();
-        model1.addElement("PLAIN     ");
-        model1.addElement("BOLD");
-        model1.addElement("ITALICS");
-        
-        DefaultComboBoxModel model2 = new DefaultComboBoxModel();
-        model2.addElement("VERDANDA");
-        model2.addElement("ARIAL");
-        model2.addElement("OPEN SANS");
-        model2.addElement("TIMES NEW ROMAN");
-        model2.addElement("SERIF");
-        model2.addElement("Helvetica");
-       
-
-		slider.setPreferredSize(new Dimension(100, 80));
-
-		JRadioButton rdbtn = new JRadioButton("Font size 10");
-		JRadioButton rdbtn1 = new JRadioButton("Font size 14");
-		JRadioButton rdbtn2 = new JRadioButton("Font size 18");
-
-
 		buttGetFile = new JButton("Get File");	
 		buttReverse = new JButton("Revese");
 		buttSave = new JButton("Save");			
@@ -158,7 +120,6 @@ public class MyGUI {
 		buttSomthing = new JButton("Somthing");			
 		buttCopyFile = new JButton("Copy File");
 		buttSomthingElse = new JButton("Somthing Else");
-
 
 		displayTextMain = new JTextArea(30,30);
 
@@ -215,10 +176,7 @@ public class MyGUI {
 		buttCopyFile = new JButton("Copy File");
 		buttSomthingElse = new JButton("Somthing Else");
 
-
-
 		slider = new JSlider(JSlider.HORIZONTAL, 0, 50, 25);
-
 
 		displayTextMain = new JTextArea(30,30);
 		displayTextSecondary = new JTextArea(15,30);
@@ -233,12 +191,6 @@ public class MyGUI {
 		panelButtons1.add(buttEditText);
 		panelButtons1.add(buttSearch);
 		panelButtons1.add(buttSelectAll); 
-
-
-		panelButtons1.add(slider); 
-
-
-
 		panelButtons1.add(slider); 
 
 		//panel containing text area inserted between the two panels of buttons
